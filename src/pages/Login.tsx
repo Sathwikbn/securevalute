@@ -39,7 +39,7 @@ const Login = () => {
           <div className="inline-flex items-center justify-center mb-4">
             <img src="/logo.svg" alt="logo" className="w-16 h-16 object-contain rounded-xl shadow-secure" />
           </div>
-          <h1 className="text-3xl font-bold">sathwik.</h1>
+          <h1 className="text-3xl font-bold">login.</h1>
           <p className="text-muted-foreground mt-2">Access your encrypted password vault</p>
         </div>
 
