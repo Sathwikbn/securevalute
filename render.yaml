@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: vaulty-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: AES_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PORT
+        value: 10000
+
+  - type: redis
+    name: vaulty-redis
+    plan: free
+    maxmemoryPolicy: allkeys-lru 
